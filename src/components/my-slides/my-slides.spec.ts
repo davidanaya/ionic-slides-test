@@ -42,7 +42,6 @@ describe("MySlidesComponent", () => {
     fixture.detectChanges();
 
     // setTimeout(() => {
-    // component.slides.slideTo(1);
     console.log(
       component.slides.length(),
       component.slides.getActiveIndex(),
