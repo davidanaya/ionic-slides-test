@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let selector of selectors">
+      <ion-toolbar hideBackButton="true">
+        <ion-buttons left>
+          <button ion-button icon-only (click)="back()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>{{ selector.title }}</ion-title>
+        <ion-buttons right>
+          <button ion-button icon-only (click)="close()">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-list>
+        <button text-center ion-item *ngFor="let option of selector.options" no-lines (click)="onSelect(option)">
+          {{ option }}
+        </button>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
